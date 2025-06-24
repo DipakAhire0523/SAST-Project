@@ -26,9 +26,7 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
           npm ci
-          npx eslint . --fix --config .eslintrc.json
-
-
+          
     
     # 1. Dependency Scanning
     - name: Check for vulnerable dependencies
@@ -40,7 +38,7 @@ jobs:
       run: npm install --save-dev eslint eslint-plugin-security eslint-plugin-node
   
     - name: Run security linting
-      run: npm run lint
+      run: npm run eslint
   
 
     
