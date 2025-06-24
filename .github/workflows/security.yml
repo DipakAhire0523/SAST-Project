@@ -2,9 +2,9 @@ name: Security Pipeline
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, feature ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, feature ]
 
 jobs:
   security:
