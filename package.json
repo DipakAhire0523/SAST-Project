@@ -4,13 +4,10 @@
   "scripts": {
     "test": "node test-security-pipeline.js",
     "lint": "eslint . --fix",
-    "lint:security": "eslint . --config .eslintrc.security.json",
+    "lint:security": "eslint . --ext .js --plugin security --rule 'security/detect-object-injection: error'",
     "start": "node index.js"
   },
-  "scripts": {
-  "lint": "eslint . --fix",
-  "eslint": "eslint ."
-  },
+
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-plugin-security": "^2.1.1",
