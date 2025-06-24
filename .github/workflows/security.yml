@@ -30,7 +30,7 @@ jobs:
     
     # 1. Dependency Scanning
     - name: Check for vulnerable dependencies
-      run: npm audit --audit-level=moderate
+      run: npm audit --force
     
     # 2. Security Linting
     - name: Run security linting
