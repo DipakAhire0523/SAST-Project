@@ -5,12 +5,10 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:security/recommended",
-    "plugin:node/recommended"
+    "plugin:security/recommended"
   ],
-  "plugins": ["security", "node"],
-  "parserOptions": {
-    "ecmaVersion": 12
-  },
+  "plugins": [
+    "security"
+  ],
   "rules": {}
 }
