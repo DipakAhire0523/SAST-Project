@@ -7,6 +7,10 @@
     "lint:security": "eslint . --config .eslintrc.security.json",
     "start": "node index.js"
   },
+  "scripts": {
+  "lint": "eslint . --fix",
+  "eslint": "eslint ."
+  },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-plugin-security": "^2.1.1",
