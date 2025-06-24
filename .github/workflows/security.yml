@@ -34,7 +34,7 @@ jobs:
     
     # 2. Security Linting
     - name: Run security linting
-      run: npm run lint:security
+      run: npm run lint
     
     # 3. Secret Scanning
     - name: Scan for secrets
