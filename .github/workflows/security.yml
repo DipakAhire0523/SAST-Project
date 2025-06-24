@@ -26,6 +26,8 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
           npm ci
+          npx eslint . --fix --config .eslintrc.json
+
 
     
     # 1. Dependency Scanning
