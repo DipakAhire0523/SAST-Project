@@ -1,0 +1,30 @@
+{
+  "name": "vulnerable-examples",
+  "version": "1.0.0",
+  "description": "Sample vulnerable code for security testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "mysql": "2.18.1",
+    "jsonwebtoken": "8.5.1",
+    "bcrypt": "5.0.1",
+    "express-session": "1.17.1",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "multer": "1.4.2",
+    "axios": "0.21.1"
+  },
+  "keywords": [
+    "security",
+    "vulnerable",
+    "testing",
+    "sast",
+    "examples"
+  ],
+  "author": "Security Testing",
+  "license": "MIT"
+}
