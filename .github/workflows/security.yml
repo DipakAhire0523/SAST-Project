@@ -33,8 +33,14 @@ jobs:
       run: npm audit --force
     
     # 2. Security Linting
+    
+    - name: Install ESLint and plugins
+      run: npm install --save-dev eslint eslint-plugin-security eslint-plugin-node
+  
     - name: Run security linting
       run: npm run lint
+  
+
     
     # 3. Secret Scanning
     - name: Scan for secrets
@@ -45,6 +51,7 @@ jobs:
         head: HEAD
     
     # 4. Static Code Analysis
+    
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:

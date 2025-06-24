@@ -8,9 +8,12 @@
       "plugin:security/recommended",
       "plugin:node/recommended"
     ],
-    "plugins": ["security", "node"],
+    "plugins": [
+      "security",
+      "node"
+    ],
     "parserOptions": {
-      "ecmaVersion": "latest"
+      "ecmaVersion": 12
     },
     "rules": {}
   }
