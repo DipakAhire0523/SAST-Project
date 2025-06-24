@@ -38,7 +38,7 @@ jobs:
       run: npm install --save-dev eslint eslint-plugin-security eslint-plugin-node
   
     - name: Run security linting
-      run: npm run eslint
+      run: npm run lint:security
   
 
     
