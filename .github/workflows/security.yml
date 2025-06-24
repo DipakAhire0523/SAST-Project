@@ -23,35 +23,30 @@ jobs:
     
     - name: Install dependencies
       run: |
-          rm -rf node_modules package-lock.json
-          npm install
-          npm ci
-          
+        rm -rf node_modules package-lock.json
+        npm install
+        npm ci
     
     # 1. Dependency Scanning
     - name: Check for vulnerable dependencies
       run: npm audit --force
     
-    # 2. Security Linting
-    
+    # 2. Security Linting (commented out)
     # - name: Install ESLint and plugins
     #   run: npm install --save-dev eslint eslint-plugin-security eslint-plugin-node
   
     # - name: Run security linting
     #   run: npm run lint:security
-  
-
     
     # 3. Secret Scanning
     - name: Scan for secrets
       uses: trufflesecurity/trufflehog@main
       with:
         path: ./
-        base: main
-        head: HEAD
+        base: ${{ github.event.pull_request.base.sha || '' }}
+        head: ${{ github.event.pull_request.head.sha || '' }}
     
     # 4. Static Code Analysis
-    
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
