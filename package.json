@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "node test-security-pipeline.js",
-    "lint": "eslint 'NodeExample/**/*.js' --ext .js --fix",
+    "lint": "eslint 'Node Example/**/*.js' --ext .js --fix",
     "lint:security": "eslint . --ext .js --plugin security --rule 'security/detect-object-injection: error'",
     "start": "node index.js"
   },
